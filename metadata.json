@@ -1,0 +1,7 @@
+{
+  "name": "Chronos - Precision Time Calculator",
+  "description": "Fast, intuitive time calculator for adding and subtracting hours and minutes, chaining time intervals, and handling cross-day calculations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
