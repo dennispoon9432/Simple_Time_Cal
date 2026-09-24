@@ -186,7 +186,7 @@ export default function App() {
               value={expression}
               onChange={(e) => setExpression(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="06:27+20+5"
+              placeholder="06:27+20-1:10"
               className="w-full bg-transparent text-slate-300 font-mono text-xl sm:text-2xl font-medium focus:outline-none placeholder:text-slate-600 tracking-tight cursor-text"
             />
           </div>
@@ -228,6 +228,25 @@ export default function App() {
             </div>
           </div>
         </div>
+
+        {/* Example Description Guide */}
+        <button
+          type="button"
+          onClick={() => {
+            setExpression('06:27+20-1:10');
+            requestAnimationFrame(() => inputRef.current?.focus());
+          }}
+          className="w-full text-left px-3 py-2 rounded-xl bg-slate-950/70 hover:bg-slate-950 border border-slate-800/80 hover:border-slate-700/80 text-[11px] text-slate-400 flex items-start gap-2 transition-colors cursor-pointer group"
+          title="點擊填入範例"
+        >
+          <span className="text-cyan-400 font-semibold shrink-0 group-hover:text-cyan-300">例：</span>
+          <div className="leading-snug">
+            <span className="font-mono text-cyan-300 font-medium group-hover:underline">06:27+20-1:10</span>
+            <span className="text-slate-400 block mt-0.5">
+              早上6時27分, 加20分鐘, 再減1小時10分鐘
+            </span>
+          </div>
+        </button>
 
         {/* Number Keypad (4x4 Grid) */}
         <div className="grid grid-cols-4 gap-2 pt-1">
